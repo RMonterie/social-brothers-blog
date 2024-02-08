@@ -23,7 +23,9 @@ export const BlogCard: React.FC<Props> = ({ blogPost }) => {
         </div>
       </div>
       <div className="p-4">
-        <h1 className="text-2xl font-bold">{truncateString(blogPost.title)}</h1>
+        <h1 className="text-2xl font-bold">
+          {truncateString(blogPost.title, 12)}
+        </h1>
         <p className="text-[0.5rem] text-[#868686]">{blogPost.content}</p>
       </div>
     </div>

@@ -65,26 +65,25 @@ export const RecentBlogContainer = () => {
           {visibleBlogPosts.map((blogPost, index) => (
             <BlogCard key={index} blogPost={blogPost} />
           ))}
-          <div className="w-full flex justify-center items-center">
-            {visibleBlogPosts.length < blogPosts.length ? (
-              <Button
-                onClick={handleLoadNext}
-                className="bg-[#F27623] rounded-full mt-[114px] text-xs px-12 mb-2 sm:mb-0"
-              >
-                Laad meer
-              </Button>
-            ) : (
-              <Button
-                onClick={handleNavigate}
-                className="bg-[#F27623] rounded-full mt-[114px] text-xs px-12 mb-2 sm:mb-0"
-              >
-                Alle blogs{" "}
-                <ArrowUpRightFromSquare className="text-white h-4 w-4" />
-              </Button>
-            )}
-          </div>
         </div>
       )}
+      <div className="w-full flex justify-center items-center">
+        {visibleBlogPosts.length < blogPosts.length ? (
+          <Button
+            onClick={handleLoadNext}
+            className="bg-[#F27623] rounded-full mt-[114px] text-xs px-12 mb-2 sm:mb-0"
+          >
+            Laad meer
+          </Button>
+        ) : (
+          <Button
+            onClick={handleNavigate}
+            className="bg-[#F27623] rounded-full mt-[114px] text-xs px-12 mb-2 sm:mb-0"
+          >
+            Alle blogs <ArrowUpRightFromSquare className="text-white h-4 w-4" />
+          </Button>
+        )}
+      </div>
     </div>
   );
 };
