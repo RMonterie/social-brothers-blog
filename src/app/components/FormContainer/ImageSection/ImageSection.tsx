@@ -24,6 +24,7 @@ export const ImageSection: React.FC<Props> = ({
           type="file"
           id="custom-input"
           className="sr-only"
+          accept="image/*"
           onChange={handleFileChange}
         />
         <label
