@@ -32,7 +32,7 @@ export const ImageSection: React.FC<Props> = ({
           className="flex items-center text-sm text-slate-500 mr-4 py-2 px-4 text-sm bg-[#fafafa] cursor-pointer"
         >
           <Camera className="w-4 h-4 mr-4 text-[#888888]" />
-          <span className="bg-[#7d7d7d] rounded-full text-white text-[10px] px-3">
+          <span className="bg-[#7d7d7d] rounded-full text-white text-[10px] px-3 truncate">
             {image ? image.name : "Kies bestand"}
           </span>
         </label>

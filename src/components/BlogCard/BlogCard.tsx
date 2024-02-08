@@ -2,7 +2,6 @@ import React from "react";
 
 import { BlogPost } from "@/types/Blog";
 import { formatTimeStamp } from "../../../util/formatTimestamp";
-import { truncateString } from "../../../util/truncateString";
 
 interface Props {
   blogPost: BlogPost;
@@ -23,9 +22,7 @@ export const BlogCard: React.FC<Props> = ({ blogPost }) => {
         </div>
       </div>
       <div className="p-4">
-        <h1 className="text-2xl font-bold">
-          {truncateString(blogPost.title, 12)}
-        </h1>
+        <h1 className="text-2xl font-bold truncate">{blogPost.title}</h1>
         <p className="text-[0.5rem] text-[#868686]">{blogPost.content}</p>
       </div>
     </div>
